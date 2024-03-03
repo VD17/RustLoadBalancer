@@ -39,12 +39,21 @@ cd RustLoadBalancer
 If you want to use this loadbalancer according to your needs you can make some configurations as below: 
 
 - Servers:
-   - Path to file: 
-      You can edit IP and port at lines x on both server codes
+   - Path to file:  loadbalancer/src/bin/server1.rs or loadbalancer/src/bin/server2.rs
+     
+      You can edit IP and port at lines 27 on both server codes
+       ```bash
+       let addr = ([127, 0, 0, 1], 1717).into();
+       ```
+     
 
 - Loadbalancer:
-    - Path to file:
-       You can edit IP and port at lines x on the main.rs code
+    - Path to file: loadbalancer/src/main.rs
+      
+       You can edit IP and port at lines 120 on the main.rs code
+        ```bash
+        let addr = ([127, 0, 0, 1], 8080).into();
+        ```
 
 ## Usage
 
