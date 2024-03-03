@@ -64,14 +64,28 @@ cargo run --bin server1
 cargo run --bin server2
 ```
 
-Now you can perfom the folowing command to start the loadbalancer :
+Now you can perfom the folowing command to start the loadbalancer:
 
 ```bash
 cargo run
 ```
 
+You can test the servers and the loadbalancer by sending a curl:
+
+```bash
+curl http://127.0.0.1:8080 <- change the port according to your needs to send the curl to the right port
+```
+
+You can also send 100 requests to see how the loadbalancer sends the requests to the servers:
+
+```bash
+seq 100 | xargs -I{} curl http://127.0.0.1:8080/
+```
 
 ## Attack
 
-To perform an attack to see how the loadbalancer deals with the HTTP requests that it recives and sends those to the servers do the following: 
+To perform an attack to see how the loadbalancer deals with the HTTP requests that it recives more than 100 requests and sends those to the servers do the following: 
 
+```bash
+seq 110 | xargs -I{} curl http://127.0.0.1:8080/
+```
