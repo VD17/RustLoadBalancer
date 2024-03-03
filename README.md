@@ -6,7 +6,7 @@
   It can aslo help omptimize ressource usage and minimize response time avoiding failures.
 
 ## Author
-  Myself
+- [@VD17](https://github.com/VD17)
 
 ## Summary
 
