@@ -91,7 +91,6 @@ async fn handle_request(_req: Request<Body>, state: Arc<RwLock<LoadBalancerState
     }
 }
 
-/// The main function that contains 
 #[tokio::main]
 async fn main() {
     println!(r#"
