@@ -1,3 +1,4 @@
+workspace = { members = ["docs"] }
 [package]
 name = "loadbalancer"
 default-run = "loadbalancer"
